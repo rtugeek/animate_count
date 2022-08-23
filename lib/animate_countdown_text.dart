@@ -168,7 +168,7 @@ class _AnimateCountdownTextState extends State<AnimateCountdownText> {
     dateTime = widget.targetTime;
 
     countdownFormat = widget.countdownFormat ?? CountdownFormat.getDefault();
-    timeLeft = differenceBetweenDateTime(dateTime,
+    timeLeft = differenceBetweenDateTime(dateTime.toUtc(),
         periodUnits: countdownFormat!.toPeriodUnits());
     // timeLeft = PeriodUtil.differenceBetweenDateTime(dateTime,
     //     periodUnits: countdownFormat!.toPeriodUnits());
@@ -212,8 +212,8 @@ class _AnimateCountdownTextState extends State<AnimateCountdownText> {
           column.add(_buildSuffixItem(_initDurationFormat.yearSuffix!));
         }
         row.add(Column(
-          children: column,
           mainAxisSize: MainAxisSize.min,
+          children: column,
         ));
         row.add(sizedBox);
       }
@@ -227,8 +227,8 @@ class _AnimateCountdownTextState extends State<AnimateCountdownText> {
           column.add(_buildSuffixItem(_initDurationFormat.monthSuffix!));
         }
         row.add(Column(
-          children: column,
           mainAxisSize: MainAxisSize.min,
+          children: column,
         ));
         row.add(sizedBox);
       }
@@ -242,8 +242,8 @@ class _AnimateCountdownTextState extends State<AnimateCountdownText> {
           column.add(_buildSuffixItem(_initDurationFormat.weekSuffix!));
         }
         row.add(Column(
-          children: column,
           mainAxisSize: MainAxisSize.min,
+          children: column,
         ));
         row.add(sizedBox);
       }
