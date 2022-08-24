@@ -185,7 +185,7 @@ class _AnimateCountdownTextState extends State<AnimateCountdownText> {
     }
     return Period.differenceBetweenDateTime(
         start == null ? LocalDateTime.now() : LocalDateTime.dateTime(start),
-        LocalDateTime.dateTime(end.subtract(DateTime.now().timeZoneOffset)),
+        LocalDateTime.dateTime(end),
         periodUnits);
   }
 
